@@ -1,0 +1,5 @@
+build
+xpi
+node_modules
+.eslintcache
+gen

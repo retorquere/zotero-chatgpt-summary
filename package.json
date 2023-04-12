@@ -1,0 +1,51 @@
+{
+  "name": "zotero-chatgpt-summary",
+  "version": "0.0.1",
+  "description": "Summarize articles",
+  "scripts": {
+    "build": "npm-run-all --parallel lint esbuild tsc",
+    "lint": "eslint . --ext .ts --cache --cache-location .eslintcache/",
+    "esbuild": "node esbuild.js",
+    "tsc": "tsc --noEmit",
+    "postbuild": "zotero-plugin-zipup build zotero-chatgpt-summary",
+    "release": "zotero-plugin-release",
+    "postversion": "git push --follow-tags",
+    "start": "zotero-start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retorquere/zotero-chatgpt-summary.git"
+  },
+  "author": {
+    "name": "Emiliano Heyns",
+    "email": "emiliano.heyns@iris-advies.com"
+  },
+  "bugs": {
+    "url": "https://github.com/retorquere/zotero-chatgpt-summary/issues"
+  },
+  "homepage": "https://github.com/retorquere/zotero-chatgpt-summary",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "esbuild": "^0.17.16",
+    "eslint": "^8.38.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^40.1.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "jszip": "^3.10.1",
+    "mkdirp": "^3.0.0",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "zotero-plugin": "^1.4.19"
+  },
+  "xpi": {
+    "name": "Summarize articles",
+    "updateLink": "https://github.com/retorquere/zotero-chatgpt-summary/releases/download/v{version}/zotero-chatgpt-summary-{version}.xpi",
+    "releaseURL": "https://github.com/retorquere/zotero-chatgpt-summary/releases/download/release/",
+    "bootstrapped": true
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
