@@ -134,7 +134,7 @@ export async function startup({ resourceURI, rootURI = resourceURI.spec }) {
         menuitem.setAttribute('label', 'Summarize')
         menuitem.setAttribute('tooltiptext', '')
         menuitem.id = id
-        menuitem.addEventListener('command', () => { Zotero.ChatGPTSummary.summarizeAll(items) })
+        menuitem.addEventListener('command', () => { Zotero.ChatGPTSummary.summarizeSelected() })
 
         menu.appendChild(menuitem)
       }
