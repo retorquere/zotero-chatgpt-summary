@@ -1,6 +1,6 @@
 {
   "name": "zotero-chatgpt-summary",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Summarize articles",
   "scripts": {
     "build": "npm-run-all --parallel lint esbuild tsc",
